@@ -17,8 +17,8 @@ build:
 requirements:
   host:
     - python >={{ python_min }}
-    - poetry-core >=2.0.0,<3.0.0
-    - poetry-dynamic-versioning >=1.0.0,<2.0.0
+    - hatchling
+    - hatch-vcs
     - pip
   run:
     - python >={{ python_min }}
@@ -46,6 +46,7 @@ test:
   source_files:
     - tests
     - pyproject.toml
+    - docs
   commands:
     - pip check
     - pytest tests
